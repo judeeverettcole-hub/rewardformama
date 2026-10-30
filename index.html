@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Story For You ♡</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #f8edef;
+    color: #927781;
+}
+
+/* NAVIGASI */
+.nav {
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    z-index: 10;
+    font-size: 12px;
+    color: #b48b98;
+    background: #fffafae0;
+    padding: 10px 17px;
+    border-radius: 30px;
+}
+
+/* SEMUA BAGIAN */
+section {
+    min-height: 100vh;
+    padding: 100px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    max-width: 480px;
+}
+
+/* WARNA */
+.opening {
+    background: #f8edef;
+}
+
+.greetings {
+    background: #fffafa;
+}
+
+.memories {
+    background: #f5e6e9;
+}
+
+.closing {
+    background: #fff9f8;
+}
+
+/* ANIMASI MUNCUL */
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 1.2s ease,
+                transform 1.2s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TULISAN */
+h1 {
+    font-size: clamp(30px, 8vw, 42px);
+    font-weight: normal;
+    color: #b18190;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #b18190;
+    margin-bottom: 18px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 2;
+    color: #907b82;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #c39ba6;
+    margin-bottom: 25px;
+}
+
+.flower {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+/* FOTO */
+.photo-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+    margin: 30px 0;
+}
+
+.photo-card {
+    background: #fffafa;
+    padding: 8px 8px 18px;
+    border-radius: 5px;
+    box-shadow: 0 5px 18px #bd9ca522;
+    transform: rotate(-2deg);
+}
+
+.photo-card:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 3px;
+    background: #ead7dc;
+}
+
+.photo-card span {
+    display: block;
+    font-size: 11px;
+    color: #ad8792;
+    margin-top: 12px;
+}
+
+/* FOTO BAGIAN 3 */
+.memories .photo-card:nth-child(3) {
+    transform: rotate(-1deg);
+}
+
+.memories .photo-card:nth-child(4) {
+    transform: rotate(2deg);
+}
+
+/* DEKORASI */
+.heart {
+    color: #d4a6b2;
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.scroll-text {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #c09aa5;
+    margin-top: 55px;
+    animation: updown 2s infinite;
+}
+
+@keyframes updown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+.footer {
+    font-size: 12px;
+    color: #c09aa5;
+    margin-top: 35px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 400px) {
+    .photo-card img {
+        height: 145px;
+    }
+
+    section {
+        padding: 85px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">♡ a little story</div>
+
+<!-- BAGIAN 1: PEMBUKA -->
+<section class="opening">
+
+    <div class="content">
+
+        <div class="reveal">
+            <div class="flower">🌷</div>
+            <div class="subtitle">A SPECIAL LITTLE REWARD</div>
+
+            <h1>Hai, Mamaaa</h1>
+        </div>
+
+        <div class="reveal">
+            <p>
+                ini hadiah special dari dede buat Mamaa
+                dede harap mama mau membaca sampai akhir ya
+                maaf dede gabisa kasih hadiah banyak selain ini
+                aku harap mama suka!
+            </p>
+
+            <div class="heart">♡</div>
+
+            <p>
+                Scroll perlahan ke bawah...
+            </p>
+        </div>
+
+        <div class="reveal scroll-text">
+            SCROLL DOWN ↓
+        </div>
+
+    </div>
+</section>
+
+
+<!-- BAGIAN 2: UCAPAN + 2 FOTO -->
+<section class="greetings">
+
+    <div class="content">
+
+        <div class="reveal">
+            <div class="flower">💌</div>
+            <div class="subtitle">A LITTLE MESSAGE</div>
+
+            <h1>Hari ini mama punya satu pencapaian kecil yang ternyata nggak sekecil itu.</h1>
+
+            <p>
+                SELAMAT SUDAH BERHASIL 1 MINGGU TANPA CHAT MANTAN!
+             Tujuh hari bukan waktu yang sebentar, apalagi untuk seseorang yang dulu selalu jadi bagian dari keseharian mama.
+             Terima kasih sudah berusaha menahan diri, belajar membiasakan hari tanpa menunggu pesan dari seseorang, dan perlahan memilih untuk fokus sama diri sendiri.
+            Mungkin sesekali mama masih teringat, mungkin kadang masih penasaran sama kesehariannya, tapi lihat deh, ternyata mama bisa melewati hari-hari itu tanpa harus kembali ke percakapan yang sama.
+                <br><br>
+               Ini bukan tentang siapa yang lebih dulu melupakan, bukan juga tentang siapa yang menang atau kalah.
+               Ini tentang mama yang mulai belajar bahwa hidup mama tetap berjalan, bahkan tanpa kehadiran seseorang yang dulu terasa begitu penting.
+            </p>
+        </div>
+
+        <!-- FOTO 1 DAN 2 -->
+        <div class="photo-box reveal">
+
+            <div class="photo-card">
+                <img src="foto1.jpeg" alt="Kenangan pertama">
+                <span>mama cantikku</span>
+            </div>
+
+            <div class="photo-card">
+                <img src="foto2.jpeg" alt="Kenangan kedua">
+                <span> mama & dede</span>
+            </div>
+
+        </div>
+
+        <div class="reveal">
+            <p>
+                One week down, more peaceful days to go.
+               Sekali lagi, selamat atas pencapaian kecil yang luar biasa ini. Proud of you! ♡
+               Semoga minggu depan bukan cuma berhasil nggak nge-chat, tapi juga berhasil nggak kepo lagi kehidupannya.
+                <br><br>
+                Jangan lupa bahagia, ya.
+                mama pantas mendapatkan banyak
+                hal indah dalam hidup mama.
+            </p>
+
+            <div class="heart">୨ৎ</div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- BAGIAN 3: 2 FOTO LAGI -->
+<section class="memories">
+
+    <div class="content">
+
+        <div class="reveal">
+            <div class="subtitle">LITTLE PIECES OF TIME</div>
+
+            <h1>Our Little Moment</h1>
+
+            <p>
+               aku beruntung bertemu mama di dunia ini
+            </p>
+        </div>
+
+        <!-- FOTO 3 DAN 4 -->
+        <div class="photo-box reveal">
+
+            <div class="photo-card">
+                <img src="foto3.jpeg" alt="Kenangan ketiga">
+                <span>i took photo</span>
+            </div>
+
+            <div class="photo-card">
+                <img src="foto4.jpeg" alt="Kenangan keempat">
+                <span>the result</span>
+            </div>
+
+        </div>
+
+        <div class="reveal">
+            <p>
+               selagi masih ada aku, mama bisa cerita semua hal ke aku.
+                <br><br>
+                aku sayang mama selalu.
+            </p>
+
+            <div class="flower">🧸</div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- BAGIAN 4: PENUTUP -->
+<section class="closing">
+
+    <div class="content">
+
+        <div class="reveal">
+            <div class="flower">🌸</div>
+
+            <div class="subtitle">ONE LAST THING</div>
+
+            <h1>For Mama, Always ♡</h1>
+        </div>
+
+        <div class="reveal">
+            <p>
+               terima kasih udah ada di hidup aku
+               terima kasih mau selalu mendengarkan cerita aku
+               makasih udah menjadi mamah yang terbaik buat aku dan abang
+               aku sangat beruntung bertemu sama mama
+                <br><br>
+                Kalau hari ini belum sesuai
+                harapan, semoga besok membawa
+                lebih banyak kebahagiaan.
+                <br><br>
+              Aku harap mama tahu betapa berharganya diri mama. Betapa beruntungnya orang-orang yang bisa mengenal mama, mendengar cerita mama, berbagi tawa dengan mama, dan menjadi bagian dari hari-hari mama.
+              Dari sekian banyak orang yang ada di dunia ini, rasanya menjadi hal yang indah ketika semesta mempertemukan aku dengan seseorang seperti mama.
+              Semoga selalu dikelilingi orang-orang yang tulus, yang menghargai setiap hal kecil tentang diri mama, dan yang selalu punya alasan untuk membuat mama tersenyum.
+              And I hope you never forget that your presence is a beautiful thing.
+            </p>
+        </div>
+
+        <div class="reveal">
+            <div class="heart">♡ ♡ ♡</div>
+
+            <h2>With Love,</h2>
+
+            <p>
+                Someone who wishes you
+                all the best.
+            </p>
+
+            <div class="footer">
+                made with love, just for mama KYRA ♡
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<script>
+
+// ANIMASI TEKS DAN FOTO SAAT DI-SCROLL
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.18
+    }
+);
+
+document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+});
+
+</script>
+
+</body>
+</html>
